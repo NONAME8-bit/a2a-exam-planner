@@ -1,0 +1,76 @@
+2025-08-20 20:09:07,330 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 8ee343ae-d51d-499b-9c10-8930751d89a8, context_id: 51dabe39-7c38-413b-8f45-5a2a435a536c).
+2025-08-20 20:09:07,401 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-20 20:09:07,427 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=3d0c2604a8da4a609bfda4cea235219c "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:07,494 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=3d0c2604a8da4a609bfda4cea235219c "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:07,499 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=3d0c2604a8da4a609bfda4cea235219c "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:07,560 [INFO] [Agent] Streaming run started query=Create an exam plan for Machine Learning, focusing on RAG, LLMs, Supervised Learning, Optimization, and Training Model Evaluation, for undergraduate students.  The preferred exam date is 2025-08-25.
+2025-08-20 20:09:07,675 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG, LLMs, Supervised Learning, Optimization, and Training Model Evaluation, for undergraduate students.  The preferred exam date is 2025-08-25.'}
+2025-08-20 20:09:07,680 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=3d0c2604a8da4a609bfda4cea235219c "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:07,720 [INFO] [Generate Node] Tool result length=432 chars
+2025-08-20 20:09:07,721 [INFO] [Format Node] Formatting plan (length=432)
+2025-08-20 20:09:07,723 [INFO] [Stream] Final content length=432
+2025-08-21 19:59:03,923 [INFO] Task not found or task_id not set. Creating new task for event (task_id: eb2ea26b-6865-442a-a428-d50243525e9b, context_id: 0bdc24ac-308c-4290-aab7-1ba8d932f6e0).
+2025-08-21 19:59:04,295 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-21 19:59:04,418 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=07d0c099285d452a9835c8adfe600aad "HTTP/1.1 202 Accepted"
+2025-08-21 19:59:04,632 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=07d0c099285d452a9835c8adfe600aad "HTTP/1.1 202 Accepted"
+2025-08-21 19:59:04,638 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=07d0c099285d452a9835c8adfe600aad "HTTP/1.1 202 Accepted"
+2025-08-21 19:59:04,912 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduates.  Target date: 2025-08-25.
+2025-08-21 19:59:05,049 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG, LLMs, and Supervised Learning for undergraduates.  Target date: 2025-08-25.'}
+2025-08-21 19:59:05,060 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=07d0c099285d452a9835c8adfe600aad "HTTP/1.1 202 Accepted"
+2025-08-21 19:59:05,152 [INFO] [Generate Node] Tool result length=399 chars
+2025-08-21 19:59:05,154 [INFO] [Format Node] Formatting plan (length=399)
+2025-08-21 19:59:05,155 [INFO] [Stream] Final content length=399
+2025-08-21 19:59:43,494 [INFO] [Agent] Streaming run started query=Provide the full exam plan for the undergraduate Machine Learning exam, including specific questions and answer keys if possible.
+2025-08-21 19:59:43,497 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 27048cdd-0a57-4069-9c86-4c71498459eb, context_id: 56316b53-fa54-464e-82e1-b18cfc8bcdbc).
+2025-08-21 19:59:43,512 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'Provide the full exam plan for the undergraduate Machine Learning exam, including specific questions and answer keys if possible.'}
+2025-08-21 19:59:43,526 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=07d0c099285d452a9835c8adfe600aad "HTTP/1.1 202 Accepted"
+2025-08-21 19:59:43,546 [INFO] [Generate Node] Tool result length=520 chars
+2025-08-21 19:59:43,548 [INFO] [Format Node] Formatting plan (length=520)
+2025-08-21 19:59:43,550 [INFO] [Stream] Final content length=520
+2025-08-21 22:29:06,833 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x0000022E71AE76E0>
+asyncgen: <async_generator object sse_client at 0x0000022E71AE76E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent NEW\a2a_friend_scheduling\nate_agent_crewai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in

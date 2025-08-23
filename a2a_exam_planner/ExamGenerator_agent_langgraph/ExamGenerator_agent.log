@@ -1,0 +1,228 @@
+2025-08-20 20:09:25,868 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 69b0d485-7837-4e36-857c-f8b863e4f92a, context_id: 96a1d54d-f739-48ec-89a1-d82dc39b81e1).
+2025-08-20 20:09:25,880 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-20 20:09:25,892 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4715b2e52789443797edee7ba52fc9cd "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:25,905 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4715b2e52789443797edee7ba52fc9cd "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:25,910 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4715b2e52789443797edee7ba52fc9cd "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:25,929 [INFO] [Agent] Streaming run started query=Generate an exam based on the following plan: {"topic": "RAG, LLMs, Supervised Learning, Optimization, and Training Model Evaluation, for undergraduate students.", "difficulty": "Hard", "coefficients": {"Explainable AI": 0.19, "Support Vector Machines": 0.02, "LSTMs": 0.4, "Decision Trees": 0.39}, "focus_topics": ["Explainable AI", "Support Vector Machines", "LSTMs", "Decision Trees"]}
+2025-08-20 20:09:26,013 [INFO] [Generate Node] Calling tool with payload={'plan_json': 'Generate an exam based on the following plan: {"topic": "RAG, LLMs, Supervised Learning, Optimization, and Training Model Evaluation, for undergraduate students.", "difficulty": "Hard", "coefficients": {"Explainable AI": 0.19, "Support Vector Machines": 0.02, "LSTMs": 0.4, "Decision Trees": 0.39}, "focus_topics": ["Explainable AI", "Support Vector Machines", "LSTMs", "Decision Trees"]}', 'topic': 'Generate an exam based on the following plan: {"topic": "RAG, LLMs, Supervised Learning, Optimization, and Training Model Evaluation, for undergraduate students.", "difficulty": "Hard", "coefficients": {"Explainable AI": 0.19, "Support Vector Machines": 0.02, "LSTMs": 0.4, "Decision Trees": 0.39}, "focus_topics": ["Explainable AI", "Support Vector Machines", "LSTMs", "Decision Trees"]}'}
+2025-08-20 20:09:26,025 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4715b2e52789443797edee7ba52fc9cd "HTTP/1.1 202 Accepted"
+2025-08-20 20:09:37,380 [INFO] [Generate Node] Tool result length=2318 chars
+2025-08-20 20:09:37,382 [INFO] [Format Node] Formatting draft (length=2318)
+2025-08-20 20:09:37,385 [INFO] [Stream] Final content length=2318
+2025-08-21 20:00:13,956 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 40b9e14d-3cf2-4374-8de7-cece1e67d4dd, context_id: 011a4267-d1a9-4ace-a6a5-2e0a080db0b3).
+2025-08-21 20:00:13,982 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-21 20:00:14,008 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=b3ac0f28fc974fd491175045888f4cc8 "HTTP/1.1 202 Accepted"
+2025-08-21 20:00:14,025 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=b3ac0f28fc974fd491175045888f4cc8 "HTTP/1.1 202 Accepted"
+2025-08-21 20:00:14,029 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=b3ac0f28fc974fd491175045888f4cc8 "HTTP/1.1 202 Accepted"
+2025-08-21 20:00:14,060 [INFO] [Agent] Streaming run started query=Generate an exam based on the following plan:  Topic: Machine Learning; Difficulty: Medium; Coefficients: {'Feedforward Neural Networks': 0.16, 'Unsupervised Learning': 0.24, 'Ethical AI': 0.03, 'Boosting': 0.24, 'Random Forests': 0.24, 'GANs': 0.09}; Focus Topics: ['Feedforward Neural Networks', 'Unsupervised Learning', 'Ethical AI', 'Boosting', 'Random Forests', 'GANs']
+2025-08-21 20:00:14,152 [INFO] [Generate Node] Calling tool with payload={'plan_json': "Generate an exam based on the following plan:  Topic: Machine Learning; Difficulty: Medium; Coefficients: {'Feedforward Neural Networks': 0.16, 'Unsupervised Learning': 0.24, 'Ethical AI': 0.03, 'Boosting': 0.24, 'Random Forests': 0.24, 'GANs': 0.09}; Focus Topics: ['Feedforward Neural Networks', 'Unsupervised Learning', 'Ethical AI', 'Boosting', 'Random Forests', 'GANs']", 'topic': "Generate an exam based on the following plan:  Topic: Machine Learning; Difficulty: Medium; Coefficients: {'Feedforward Neural Networks': 0.16, 'Unsupervised Learning': 0.24, 'Ethical AI': 0.03, 'Boosting': 0.24, 'Random Forests': 0.24, 'GANs': 0.09}; Focus Topics: ['Feedforward Neural Networks', 'Unsupervised Learning', 'Ethical AI', 'Boosting', 'Random Forests', 'GANs']"}
+2025-08-21 20:00:14,170 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=b3ac0f28fc974fd491175045888f4cc8 "HTTP/1.1 202 Accepted"
+2025-08-21 20:00:25,687 [INFO] [Generate Node] Tool result length=2283 chars
+2025-08-21 20:00:25,689 [INFO] [Format Node] Formatting draft (length=2283)
+2025-08-21 20:00:25,692 [INFO] [Stream] Final content length=2283
+2025-08-22 10:38:29,022 [INFO]  ExamGeneratorn received message text:
+Generate an exam based on this plan: {
+  "topic": "RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.",
+  "difficulty": "Hard",
+  "coefficients": {
+    "RNNs": 0.16,
+    "Model Interpretability": 0.37,
+    "Explainable AI": 0.36,
+    "Cross-Validation": 0.02,
+    "Computer Vision": 0.08
+  },
+  "focus_topics": [
+    "RNNs",
+    "Model Interpretability",
+    "Explainable AI",
+    "Cross-Validation",
+    "Computer Vision"
+  ]
+}
+2025-08-22 10:38:29,026 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Generate an exam based on this plan: {\n  "topic": "RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "RNNs": 0.16,\n    "Model Interpretability": 0.37,\n    "Explainable AI": 0.36,\n    "Cross-Validation": 0.02,\n    "Computer Vision": 0.08\n  },\n  "focus_topics": [\n    "RNNs",\n    "Model Interpretability",\n    "Explainable AI",\n    "Cross-Validation",\n    "Computer Vision"\n  ]\n}')
+2025-08-22 10:38:30,326 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 0d79e75b-a53e-494b-93ad-ab4274b3b16f, context_id: 4b85d391-6552-4a9a-a9d3-986263758a1e).
+2025-08-22 10:38:30,336 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 10:38:30,347 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=158dc6d38acf48aa813885a2021fe2e3 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:30,359 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=158dc6d38acf48aa813885a2021fe2e3 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:30,363 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=158dc6d38acf48aa813885a2021fe2e3 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:30,380 [INFO] [Agent] Streaming run started query=Generate an exam based on this plan: {
+  "topic": "RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.",
+  "difficulty": "Hard",
+  "coefficients": {
+    "RNNs": 0.16,
+    "Model Interpretability": 0.37,
+    "Explainable AI": 0.36,
+    "Cross-Validation": 0.02,
+    "Computer Vision": 0.08
+  },
+  "focus_topics": [
+    "RNNs",
+    "Model Interpretability",
+    "Explainable AI",
+    "Cross-Validation",
+    "Computer Vision"
+  ]
+}
+2025-08-22 10:38:30,580 [INFO] [Generate Node] Calling tool with payload={'plan_json': 'Generate an exam based on this plan: {\n  "topic": "RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "RNNs": 0.16,\n    "Model Interpretability": 0.37,\n    "Explainable AI": 0.36,\n    "Cross-Validation": 0.02,\n    "Computer Vision": 0.08\n  },\n  "focus_topics": [\n    "RNNs",\n    "Model Interpretability",\n    "Explainable AI",\n    "Cross-Validation",\n    "Computer Vision"\n  ]\n}', 'topic': 'Generate an exam based on this plan: {\n  "topic": "RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "RNNs": 0.16,\n    "Model Interpretability": 0.37,\n    "Explainable AI": 0.36,\n    "Cross-Validation": 0.02,\n    "Computer Vision": 0.08\n  },\n  "focus_topics": [\n    "RNNs",\n    "Model Interpretability",\n    "Explainable AI",\n    "Cross-Validation",\n    "Computer Vision"\n  ]\n}'}
+2025-08-22 10:38:30,591 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=158dc6d38acf48aa813885a2021fe2e3 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:41,668 [INFO] [Generate Node] Tool result length=2356 chars
+2025-08-22 10:38:41,671 [INFO] [Format Node] Formatting draft (length=2356)
+2025-08-22 10:38:41,673 [INFO] [Stream] Final content length=2356
+2025-08-22 10:47:12,672 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x000002247D60B570>
+asyncgen: <async_generator object sse_client at 0x000002247D60B570>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 10:55:06,485 [INFO]  ExamGeneratorn received message text:
+Generate an exam based on the following plan: {
+  "topic": "Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.",
+  "difficulty": "Hard",
+  "coefficients": {
+    "Model Evaluation Metrics": 0.04,
+    "Explainable AI": 0.11,
+    "Self-Supervised Learning": 0.18,
+    "MLOps": 0.2,
+    "Reinforcement Learning": 0.2,
+    "Data Preprocessing": 0.27
+  },
+  "focus_topics": [
+    "Model Evaluation Metrics",
+    "Explainable AI",
+    "Self-Supervised Learning",
+    "MLOps",
+    "Reinforcement Learning",
+    "Data Preprocessing"
+  ]
+}
+2025-08-22 10:55:06,489 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Generate an exam based on the following plan: {\n  "topic": "Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "Model Evaluation Metrics": 0.04,\n    "Explainable AI": 0.11,\n    "Self-Supervised Learning": 0.18,\n    "MLOps": 0.2,\n    "Reinforcement Learning": 0.2,\n    "Data Preprocessing": 0.27\n  },\n  "focus_topics": [\n    "Model Evaluation Metrics",\n    "Explainable AI",\n    "Self-Supervised Learning",\n    "MLOps",\n    "Reinforcement Learning",\n    "Data Preprocessing"\n  ]\n}')
+2025-08-22 10:55:07,911 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 5bc50be7-d52a-48fe-9ab4-16989008a74c, context_id: ed87a485-cfa8-44d4-b9d0-190825d53d20).
+2025-08-22 10:55:07,924 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 10:55:07,936 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=8491276688aa4b89ab57dd52c5559fca "HTTP/1.1 202 Accepted"
+2025-08-22 10:55:07,950 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=8491276688aa4b89ab57dd52c5559fca "HTTP/1.1 202 Accepted"
+2025-08-22 10:55:07,954 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=8491276688aa4b89ab57dd52c5559fca "HTTP/1.1 202 Accepted"
+2025-08-22 10:55:07,973 [INFO] [Agent] Streaming run started query=Generate an exam based on the following plan: {
+  "topic": "Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.",
+  "difficulty": "Hard",
+  "coefficients": {
+    "Model Evaluation Metrics": 0.04,
+    "Explainable AI": 0.11,
+    "Self-Supervised Learning": 0.18,
+    "MLOps": 0.2,
+    "Reinforcement Learning": 0.2,
+    "Data Preprocessing": 0.27
+  },
+  "focus_topics": [
+    "Model Evaluation Metrics",
+    "Explainable AI",
+    "Self-Supervised Learning",
+    "MLOps",
+    "Reinforcement Learning",
+    "Data Preprocessing"
+  ]
+}
+2025-08-22 10:55:08,016 [INFO] [Generate Node] Calling tool with payload={'plan_json': 'Generate an exam based on the following plan: {\n  "topic": "Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "Model Evaluation Metrics": 0.04,\n    "Explainable AI": 0.11,\n    "Self-Supervised Learning": 0.18,\n    "MLOps": 0.2,\n    "Reinforcement Learning": 0.2,\n    "Data Preprocessing": 0.27\n  },\n  "focus_topics": [\n    "Model Evaluation Metrics",\n    "Explainable AI",\n    "Self-Supervised Learning",\n    "MLOps",\n    "Reinforcement Learning",\n    "Data Preprocessing"\n  ]\n}', 'topic': 'Generate an exam based on the following plan: {\n  "topic": "Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.",\n  "difficulty": "Hard",\n  "coefficients": {\n    "Model Evaluation Metrics": 0.04,\n    "Explainable AI": 0.11,\n    "Self-Supervised Learning": 0.18,\n    "MLOps": 0.2,\n    "Reinforcement Learning": 0.2,\n    "Data Preprocessing": 0.27\n  },\n  "focus_topics": [\n    "Model Evaluation Metrics",\n    "Explainable AI",\n    "Self-Supervised Learning",\n    "MLOps",\n    "Reinforcement Learning",\n    "Data Preprocessing"\n  ]\n}'}
+2025-08-22 10:55:08,026 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=8491276688aa4b89ab57dd52c5559fca "HTTP/1.1 202 Accepted"
+2025-08-22 10:55:19,030 [INFO] [Generate Node] Tool result length=2119 chars
+2025-08-22 10:55:19,032 [INFO] [Format Node] Formatting draft (length=2119)
+2025-08-22 10:55:19,033 [INFO] [Stream] Final content length=2119
+2025-08-22 10:57:10,182 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x00000226613CB570>
+asyncgen: <async_generator object sse_client at 0x00000226613CB570>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | BaseExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamGenerator_agent_langgraph\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 15:02:33,934 [INFO]  ExamGeneratorn received message text:
+Generate an exam based on the following plan: {
+  "topic": "Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.",
+  "difficulty": "Medium",
+  "coefficients": {
+    "Calculus for ML": 0.22,
+    "GRUs": 0.17,
+    "CNNs": 0.19,
+    "Semi-Supervised Learning": 0.1,
+    "LSTMs": 0.33
+  },
+  "focus_topics": [
+    "Calculus for ML",
+    "GRUs",
+    "CNNs",
+    "Semi-Supervised Learning",
+    "LSTMs"
+  ]
+}
+2025-08-22 15:02:33,945 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Generate an exam based on the following plan: {\n  "topic": "Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.",\n  "difficulty": "Medium",\n  "coefficients": {\n    "Calculus for ML": 0.22,\n    "GRUs": 0.17,\n    "CNNs": 0.19,\n    "Semi-Supervised Learning": 0.1,\n    "LSTMs": 0.33\n  },\n  "focus_topics": [\n    "Calculus for ML",\n    "GRUs",\n    "CNNs",\n    "Semi-Supervised Learning",\n    "LSTMs"\n  ]\n}')
+2025-08-22 15:02:35,154 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 94a03a82-ec60-471f-b1c3-be873429b948, context_id: e9904842-14f5-4825-bbb4-7007aa7c5a10).
+2025-08-22 15:02:35,165 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 15:02:35,177 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6e722ea4c8a74920995802054a5eb663 "HTTP/1.1 202 Accepted"
+2025-08-22 15:02:35,188 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6e722ea4c8a74920995802054a5eb663 "HTTP/1.1 202 Accepted"
+2025-08-22 15:02:35,192 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6e722ea4c8a74920995802054a5eb663 "HTTP/1.1 202 Accepted"
+2025-08-22 15:02:35,359 [INFO] [Agent] Streaming run started query=Generate an exam based on the following plan: {
+  "topic": "Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.",
+  "difficulty": "Medium",
+  "coefficients": {
+    "Calculus for ML": 0.22,
+    "GRUs": 0.17,
+    "CNNs": 0.19,
+    "Semi-Supervised Learning": 0.1,
+    "LSTMs": 0.33
+  },
+  "focus_topics": [
+    "Calculus for ML",
+    "GRUs",
+    "CNNs",
+    "Semi-Supervised Learning",
+    "LSTMs"
+  ]
+}
+2025-08-22 15:02:35,682 [INFO] [Generate Node] Calling tool with payload={'plan_json': 'Generate an exam based on the following plan: {\n  "topic": "Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.",\n  "difficulty": "Medium",\n  "coefficients": {\n    "Calculus for ML": 0.22,\n    "GRUs": 0.17,\n    "CNNs": 0.19,\n    "Semi-Supervised Learning": 0.1,\n    "LSTMs": 0.33\n  },\n  "focus_topics": [\n    "Calculus for ML",\n    "GRUs",\n    "CNNs",\n    "Semi-Supervised Learning",\n    "LSTMs"\n  ]\n}', 'topic': 'Generate an exam based on the following plan: {\n  "topic": "Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.",\n  "difficulty": "Medium",\n  "coefficients": {\n    "Calculus for ML": 0.22,\n    "GRUs": 0.17,\n    "CNNs": 0.19,\n    "Semi-Supervised Learning": 0.1,\n    "LSTMs": 0.33\n  },\n  "focus_topics": [\n    "Calculus for ML",\n    "GRUs",\n    "CNNs",\n    "Semi-Supervised Learning",\n    "LSTMs"\n  ]\n}'}
+2025-08-22 15:02:35,695 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6e722ea4c8a74920995802054a5eb663 "HTTP/1.1 202 Accepted"
+2025-08-22 15:02:46,112 [INFO] [Generate Node] Tool result length=2323 chars
+2025-08-22 15:02:46,114 [INFO] [Format Node] Formatting draft (length=2323)
+2025-08-22 15:02:46,115 [INFO] [Stream] Final content length=2323

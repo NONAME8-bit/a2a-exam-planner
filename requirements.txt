@@ -1,0 +1,21 @@
+# requirements.txt
+
+# Core environment
+python-dotenv>=1.0.1
+numpy>=1.26.0
+PyPDF2>=3.0.1
+faiss-cpu>=1.7.4
+
+# Embeddings + similarity
+sentence-transformers>=2.7.0
+
+# LangChain ecosystem
+langchain>=0.2.14
+langchain-community>=0.2.12
+langchain-google-genai>=1.0.7
+
+# MCP server
+fastmcp>=0.1.0   # from mcp.server.fastmcp (adjust if you use a specific repo)
+
+# Database
+SQLAlchemy>=2.0.32

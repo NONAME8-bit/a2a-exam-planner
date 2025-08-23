@@ -1,0 +1,452 @@
+2025-08-22 10:29:34,011 [INFO]  ExamPlanner received message text:
+Create an exam plan for a Machine Learning exam covering RAG, LLMs, and Supervised Learning for undergraduates.  Preferred date is 2025-08-26.
+2025-08-22 10:29:34,012 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for a Machine Learning exam covering RAG, LLMs, and Supervised Learning for undergraduates.  Preferred date is 2025-08-26.')
+2025-08-22 10:29:35,492 [INFO] Task not found or task_id not set. Creating new task for event (task_id: ee7fcca4-b6ce-4081-9e74-af98cf94a412, context_id: d3216e38-3045-42c9-be28-4863ceee9602).
+2025-08-22 10:29:35,509 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 10:29:35,528 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6cc89d38e493409bac23904cc2b9cc1c "HTTP/1.1 202 Accepted"
+2025-08-22 10:29:35,545 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6cc89d38e493409bac23904cc2b9cc1c "HTTP/1.1 202 Accepted"
+2025-08-22 10:29:35,549 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6cc89d38e493409bac23904cc2b9cc1c "HTTP/1.1 202 Accepted"
+2025-08-22 10:29:35,577 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam covering RAG, LLMs, and Supervised Learning for undergraduates.  Preferred date is 2025-08-26.
+2025-08-22 10:29:35,825 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'Create an exam plan for a Machine Learning exam covering RAG, LLMs, and Supervised Learning for undergraduates.  Preferred date is 2025-08-26.'}
+2025-08-22 10:29:35,832 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=6cc89d38e493409bac23904cc2b9cc1c "HTTP/1.1 202 Accepted"
+2025-08-22 10:29:35,847 [INFO] [Generate Node] Tool result length=621 chars
+2025-08-22 10:29:35,848 [INFO] [Format Node] Formatting plan (length=621)
+2025-08-22 10:29:35,849 [INFO] [Stream] Final content length=621
+2025-08-22 10:33:03,632 [ERROR] an error occurred during closing of asynchronous generator <async_generator object aconnect_sse at 0x00000231CCD4C370>
+asyncgen: <async_generator object aconnect_sse at 0x00000231CCD4C370>
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 70, in aconnect_sse
+    yield EventSource(response)
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 69, in aconnect_sse
+    async with client.stream(method, url, headers=headers, **kwargs) as response:
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    raise RuntimeError("generator didn't stop after athrow()")
+RuntimeError: generator didn't stop after athrow()
+2025-08-22 10:33:03,698 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x00000231CCB276E0>
+asyncgen: <async_generator object sse_client at 0x00000231CCB276E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 10:38:14,377 [INFO]  ExamPlanner received message text:
+Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.
+2025-08-22 10:38:14,379 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.')
+2025-08-22 10:38:15,699 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 8774ff16-f786-40dd-a317-8a93fa9eacc4, context_id: 527b0a43-6eea-4615-aa46-aa2450166b35).
+2025-08-22 10:38:15,714 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 10:38:15,727 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e4c9c698cb424f108c45cc7d015190a5 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:15,740 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e4c9c698cb424f108c45cc7d015190a5 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:15,745 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e4c9c698cb424f108c45cc7d015190a5 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:15,773 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.
+2025-08-22 10:38:15,806 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG, LLMs, and Supervised Learning for undergraduate students.  The preferred exam date is 2025-08-26.'}
+2025-08-22 10:38:15,813 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e4c9c698cb424f108c45cc7d015190a5 "HTTP/1.1 202 Accepted"
+2025-08-22 10:38:15,828 [INFO] [Generate Node] Tool result length=443 chars
+2025-08-22 10:38:15,829 [INFO] [Format Node] Formatting plan (length=443)
+2025-08-22 10:38:15,830 [INFO] [Stream] Final content length=443
+2025-08-22 10:47:14,414 [ERROR] an error occurred during closing of asynchronous generator <async_generator object aconnect_sse at 0x00000204D53AC590>
+asyncgen: <async_generator object aconnect_sse at 0x00000204D53AC590>
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 70, in aconnect_sse
+    yield EventSource(response)
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 69, in aconnect_sse
+    async with client.stream(method, url, headers=headers, **kwargs) as response:
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    raise RuntimeError("generator didn't stop after athrow()")
+RuntimeError: generator didn't stop after athrow()
+2025-08-22 10:47:14,433 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x00000204D51776E0>
+asyncgen: <async_generator object sse_client at 0x00000204D51776E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 10:54:50,617 [INFO]  ExamPlanner received message text:
+Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.
+2025-08-22 10:54:50,619 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.')
+2025-08-22 10:54:51,968 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 01da43b8-8346-4798-ad07-c27e680e9f94, context_id: 73403181-d0dd-4a18-849d-20f9617015f0).
+2025-08-22 10:54:51,985 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 10:54:52,003 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=a921d070b3ab44f9852f4099b099984b "HTTP/1.1 202 Accepted"
+2025-08-22 10:54:52,020 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=a921d070b3ab44f9852f4099b099984b "HTTP/1.1 202 Accepted"
+2025-08-22 10:54:52,026 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=a921d070b3ab44f9852f4099b099984b "HTTP/1.1 202 Accepted"
+2025-08-22 10:54:52,058 [INFO] [Agent] Streaming run started query=Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.
+2025-08-22 10:54:52,098 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'Create an exam plan for an undergraduate-level Machine Learning exam covering RAG, LLMs, and Supervised Learning.  The preferred date is 2025-08-26.'}
+2025-08-22 10:54:52,106 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=a921d070b3ab44f9852f4099b099984b "HTTP/1.1 202 Accepted"
+2025-08-22 10:54:52,124 [INFO] [Generate Node] Tool result length=581 chars
+2025-08-22 10:54:52,126 [INFO] [Format Node] Formatting plan (length=581)
+2025-08-22 10:54:52,128 [INFO] [Stream] Final content length=581
+2025-08-22 10:57:12,337 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x0000012F08A576E0>
+asyncgen: <async_generator object sse_client at 0x0000012F08A576E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 11:06:37,032 [INFO]  ExamPlanner received message text:
+Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduates.  The preferred exam date is 2025-08-26.
+2025-08-22 11:06:37,034 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduates.  The preferred exam date is 2025-08-26.')
+2025-08-22 11:06:38,509 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 83cdee71-0c83-4644-a1f5-cca652620c12, context_id: 98397f20-c217-42ce-8777-4bcfef64e390).
+2025-08-22 11:06:38,528 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 11:06:38,546 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=677e1f84d1ea409ca23d7c30889ebb48 "HTTP/1.1 202 Accepted"
+2025-08-22 11:06:38,564 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=677e1f84d1ea409ca23d7c30889ebb48 "HTTP/1.1 202 Accepted"
+2025-08-22 11:06:38,570 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=677e1f84d1ea409ca23d7c30889ebb48 "HTTP/1.1 202 Accepted"
+2025-08-22 11:06:38,605 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam focusing on RAG, LLMs, and Supervised Learning for undergraduates.  The preferred exam date is 2025-08-26.
+2025-08-22 11:06:38,727 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG, LLMs, and Supervised Learning for undergraduates.  The preferred exam date is 2025-08-26.'}
+2025-08-22 11:06:38,735 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=677e1f84d1ea409ca23d7c30889ebb48 "HTTP/1.1 202 Accepted"
+2025-08-22 11:06:38,751 [INFO] [Generate Node] Tool result length=399 chars
+2025-08-22 11:06:38,752 [INFO] [Format Node] Formatting plan (length=399)
+2025-08-22 11:06:38,754 [INFO] [Stream] Final content length=399
+2025-08-22 13:41:33,790 [ERROR] Error in sse_reader
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_transports\default.py", line 101, in map_httpcore_exceptions
+    yield
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_transports\default.py", line 271, in __aiter__
+    async for part in self._httpcore_stream:
+        yield part
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\connection_pool.py", line 407, in __aiter__
+    raise exc from None
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\connection_pool.py", line 403, in __aiter__
+    async for part in self._stream:
+        yield part
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\http11.py", line 342, in __aiter__
+    raise exc
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\http11.py", line 334, in __aiter__
+    async for chunk in self._connection._receive_response_body(**kwargs):
+        yield chunk
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\http11.py", line 203, in _receive_response_body
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_async\http11.py", line 217, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.READ_NUM_BYTES, timeout=timeout
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with map_exceptions(exc_map):
+         ~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 72, in sse_reader
+    async for sse in event_source.aiter_sse():
+    ...<34 lines>...
+                logger.warning(f"Unknown SSE event: {sse.event}")
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 39, in aiter_sse
+    async for line in self._response.aiter_lines():
+    ...<3 lines>...
+            yield sse
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_models.py", line 1031, in aiter_lines
+    async for text in self.aiter_text():
+        for line in decoder.decode(text):
+            yield line
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_models.py", line 1018, in aiter_text
+    async for byte_content in self.aiter_bytes():
+    ...<2 lines>...
+            yield chunk
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_models.py", line 997, in aiter_bytes
+    async for raw_bytes in self.aiter_raw():
+    ...<2 lines>...
+            yield chunk
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_models.py", line 1055, in aiter_raw
+    async for raw_stream_bytes in self.stream:
+    ...<2 lines>...
+            yield chunk
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_client.py", line 176, in __aiter__
+    async for chunk in self._stream:
+        yield chunk
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_transports\default.py", line 270, in __aiter__
+    with map_httpcore_exceptions():
+         ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx\_transports\default.py", line 118, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2025-08-22 14:02:49,220 [INFO]  ExamPlanner received message text:
+Create an exam plan for a Machine Learning exam on RAG and LLMs for undergraduate level.  Preferred date is 2025-08-25.
+2025-08-22 14:02:49,224 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for a Machine Learning exam on RAG and LLMs for undergraduate level.  Preferred date is 2025-08-25.')
+2025-08-22 14:02:49,228 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam on RAG and LLMs for undergraduate level.  Preferred date is 2025-08-25.
+2025-08-22 14:02:49,552 [INFO] Task not found or task_id not set. Creating new task for event (task_id: f52d4084-34c2-442c-90bd-233b10d123eb, context_id: a7fcf217-7113-40eb-959f-6b9fd56fc9e4).
+2025-08-22 14:02:49,597 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG and LLMs for undergraduate level.  Preferred date is 2025-08-25.'}
+2025-08-22 14:02:49,656 [ERROR] [Generate Node] Error: 
+2025-08-22 14:02:49,659 [INFO] [Format Node] Formatting plan (length=7)
+2025-08-22 14:02:49,662 [INFO] [Stream] Final content length=7
+2025-08-22 14:03:11,947 [ERROR] an error occurred during closing of asynchronous generator <async_generator object aconnect_sse at 0x00000186F4C1C370>
+asyncgen: <async_generator object aconnect_sse at 0x00000186F4C1C370>
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 70, in aconnect_sse
+    yield EventSource(response)
+GeneratorExit
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\httpx_sse\_api.py", line 69, in aconnect_sse
+    async with client.stream(method, url, headers=headers, **kwargs) as response:
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    raise RuntimeError("generator didn't stop after athrow()")
+RuntimeError: generator didn't stop after athrow()
+2025-08-22 14:03:11,954 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x00000186F49E76E0>
+asyncgen: <async_generator object sse_client at 0x00000186F49E76E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 14:08:25,191 [INFO]  ExamPlanner received message text:
+Create an exam plan for an undergraduate-level exam on RAG and LLMs.  Include a mix of fundamental concepts and questions suitable for assessment.
+2025-08-22 14:08:25,193 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for an undergraduate-level exam on RAG and LLMs.  Include a mix of fundamental concepts and questions suitable for assessment.')
+2025-08-22 14:08:26,199 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 74c2e658-1456-44ed-9365-bdac4ef5ab85, context_id: c181dda3-2df3-4c0d-855e-bb3a9a8e3255).
+2025-08-22 14:08:26,212 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 14:08:26,227 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4c633c1a31ff45beaa67437d5374c3ae "HTTP/1.1 202 Accepted"
+2025-08-22 14:08:26,243 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4c633c1a31ff45beaa67437d5374c3ae "HTTP/1.1 202 Accepted"
+2025-08-22 14:08:26,246 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4c633c1a31ff45beaa67437d5374c3ae "HTTP/1.1 202 Accepted"
+2025-08-22 14:08:26,267 [INFO] [Agent] Streaming run started query=Create an exam plan for an undergraduate-level exam on RAG and LLMs.  Include a mix of fundamental concepts and questions suitable for assessment.
+2025-08-22 14:08:26,397 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'RAG and LLMs.  Include a mix of fundamental concepts and questions suitable for assessment.'}
+2025-08-22 14:08:26,402 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=4c633c1a31ff45beaa67437d5374c3ae "HTTP/1.1 202 Accepted"
+2025-08-22 14:08:26,414 [INFO] [Generate Node] Tool result length=416 chars
+2025-08-22 14:08:26,415 [INFO] [Format Node] Formatting plan (length=416)
+2025-08-22 14:08:26,416 [INFO] [Stream] Final content length=416
+2025-08-22 14:44:46,019 [ERROR] an error occurred during closing of asynchronous generator <async_generator object sse_client at 0x000001CBA55F76E0>
+asyncgen: <async_generator object sse_client at 0x000001CBA55F76E0>
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 772, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 139, in sse_client
+    |     yield read_stream, write_stream
+    | GeneratorExit
+    | 
+    | During handling of the above exception, another exception occurred:
+    | 
+    | Traceback (most recent call last):
+    |   File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 60, in sse_client
+    |     async with aconnect_sse(
+    |                ~~~~~~~~~~~~^
+    |         client,
+    |         ^^^^^^^
+    |         "GET",
+    |         ^^^^^^
+    |         url,
+    |         ^^^^
+    |     ) as event_source:
+    |     ^
+    |   File "C:\Users\user\AppData\Roaming\uv\python\cpython-3.13.6-windows-x86_64-none\Lib\contextlib.py", line 271, in __aexit__
+    |     raise RuntimeError("generator didn't stop after athrow()")
+    | RuntimeError: generator didn't stop after athrow()
+    +------------------------------------
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\mcp\client\sse.py", line 54, in sse_client
+    async with anyio.create_task_group() as tg:
+               ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 778, in __aexit__
+    if self.cancel_scope.__exit__(type(exc), exc, exc.__traceback__):
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\user\Untitled Folder\agent2agent Exam\a2a_exam_planner\ExamPlanner_agent_langgraph\exam_env\Lib\site-packages\anyio\_backends\_asyncio.py", line 457, in __exit__
+    raise RuntimeError(
+    ...<2 lines>...
+    )
+RuntimeError: Attempted to exit cancel scope in a different task than it was entered in
+2025-08-22 14:52:19,954 [INFO]  ExamPlanner received message text:
+Create an exam plan for a Machine Learning exam on Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.
+2025-08-22 14:52:19,957 [INFO]  Part[0]: root=TextPart(kind='text', metadata=None, text='Create an exam plan for a Machine Learning exam on Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.')
+2025-08-22 14:52:21,199 [INFO] Task not found or task_id not set. Creating new task for event (task_id: 16126003-af98-4dbe-b7da-9129e1858122, context_id: 36bc90eb-9057-4cc9-9fef-81747b8bd0ac).
+2025-08-22 14:52:21,209 [INFO] HTTP Request: GET http://127.0.0.1:8787/sse "HTTP/1.1 200 OK"
+2025-08-22 14:52:21,225 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e96f642b1fc04d1987d5154749f20427 "HTTP/1.1 202 Accepted"
+2025-08-22 14:52:21,241 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e96f642b1fc04d1987d5154749f20427 "HTTP/1.1 202 Accepted"
+2025-08-22 14:52:21,253 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e96f642b1fc04d1987d5154749f20427 "HTTP/1.1 202 Accepted"
+2025-08-22 14:52:21,303 [INFO] [Agent] Streaming run started query=Create an exam plan for a Machine Learning exam on Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.
+2025-08-22 14:52:21,365 [INFO] [Generate Node] Calling tool 'generate_exam_plan' with payload={'topic': 'Supervised Learning, RAG, and LLMs at the undergraduate level.  Preferred exam date is 2025-08-25.'}
+2025-08-22 14:52:21,376 [INFO] HTTP Request: POST http://127.0.0.1:8787/messages/?session_id=e96f642b1fc04d1987d5154749f20427 "HTTP/1.1 202 Accepted"
+2025-08-22 14:52:21,400 [INFO] [Generate Node] Tool result length=402 chars
+2025-08-22 14:52:21,404 [INFO] [Format Node] Formatting plan (length=402)
+2025-08-22 14:52:21,406 [INFO] [Stream] Final content length=402
